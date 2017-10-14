@@ -6,7 +6,36 @@ using System.Threading.Tasks;
 
 namespace Bank_Account
 {
-    class Accounts
+    abstract class Accounts
     {
+        //fields
+        protected string acctType;
+        protected int acctNum;
+        protected float acctBalance;
+
+        //Properties
+        public string AcctType { get; set; }
+        public float AcctBalance { get; set; }
+        public int AcctNum
+        {
+            get { return this.acctNum; }
+        }
+
+        //Constructors
+        public Accounts()
+        {
+
+        }
+        public Accounts(string acctType, float acctBalance, int acctNum)
+        {
+            this.acctType = acctType;
+            this.acctBalance = acctBalance;
+            this.acctNum = acctNum;
+        }
+
+        //methods
+        public abstract string Withdraw();
+
+
     }
 }
