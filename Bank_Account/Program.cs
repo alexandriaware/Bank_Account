@@ -13,6 +13,7 @@ namespace Bank_Account
             //instantiate
             Client potter = new Client();
             CheckingAccount check = new CheckingAccount();
+            SavingsAccount save = new SavingsAccount();
 
 
             Console.WriteLine("Please make your selection from the following options:");
@@ -42,9 +43,11 @@ namespace Bank_Account
                     {
                         Console.WriteLine(check.acctBalance);
                         //insert checking account balance
+                        
                     }
                     else if (account == "2")
                     {
+                        Console.WriteLine(save.acctBalance);
                         //insert savings account balance
                     }
                     else

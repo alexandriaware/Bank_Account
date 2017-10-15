@@ -12,7 +12,7 @@ namespace Bank_Account
         protected string acctType;
         protected int acctNum;
         public float acctBalance;
-        protected float input;
+        
 
         //Properties
         public string AcctType { get; set; }
