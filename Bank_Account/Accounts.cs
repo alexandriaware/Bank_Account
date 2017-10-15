@@ -11,12 +11,15 @@ namespace Bank_Account
         //fields
         protected string acctType;
         protected int acctNum;
-        protected float acctBalance;
+        public float acctBalance;
         protected float input;
 
         //Properties
         public string AcctType { get; set; }
-        public float AcctBalance { get; set; }
+        public float AcctBalance
+        {
+            get { return this.acctBalance; }
+        }
         public int AcctNum
         {
             get { return this.acctNum; }

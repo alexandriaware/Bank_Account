@@ -10,8 +10,9 @@ namespace Bank_Account
     {
         static void Main(string[] args)
         {
-
+            //instantiate
             Client potter = new Client();
+            CheckingAccount check = new CheckingAccount();
 
 
             Console.WriteLine("Please make your selection from the following options:");
@@ -39,7 +40,7 @@ namespace Bank_Account
                     account = Console.ReadLine().Trim();
                     if (account == "1")
                     {
-                        
+                        Console.WriteLine(check.acctBalance);
                         //insert checking account balance
                     }
                     else if (account == "2")
