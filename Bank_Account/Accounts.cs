@@ -12,6 +12,7 @@ namespace Bank_Account
         protected string acctType;
         protected int acctNum;
         protected float acctBalance;
+        protected float input;
 
         //Properties
         public string AcctType { get; set; }
@@ -34,7 +35,9 @@ namespace Bank_Account
         }
 
         //methods
-        public abstract string Withdraw();
+        public abstract void Withdraw();
+
+        public abstract void Deposit();
 
 
     }

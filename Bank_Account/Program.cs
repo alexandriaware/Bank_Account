@@ -21,34 +21,16 @@ namespace Bank_Account
             Console.WriteLine("4. Withdraw Funds");
             Console.WriteLine("5. Exit");
 
-            //if 1 - ViewClientInformation Method
-            //if 2 view account balance method
-            //if 3 deposit funds method
-            //if 4 //withdraw funds method
-            //if 5 exit program
-            //if 6, return to main menu (put this everywhere except main menu)
-
-
-            /*
-                View account balance method
-                    - This method should allow you to view the balance for either the
-                     savings account or the checking account.
-
-                    - It should also be able to be reused anywhere to show account balances without
-                    user input
-
-            */
-
             string selection = Console.ReadLine().Trim(); //store input
             string account = "";
 
             do//keep asking until they put in correct numbers
             {
-                if (selection == "1")
+                if (selection == "1") //Client information
                 {
                     Console.WriteLine(potter.GetInfo());
                 }
-                else if (selection == "2")
+                else if (selection == "2") //Account balance
                 {
                     ////Could this be a method?
                     Console.WriteLine("Please make a selection:");
@@ -57,11 +39,12 @@ namespace Bank_Account
                     account = Console.ReadLine().Trim();
                     if (account == "1")
                     {
-                        //insert checking account method
+                        
+                        //insert checking account balance
                     }
                     else if (account == "2")
                     {
-                        //insert savings account method
+                        //insert savings account balance
                     }
                     else
                     {
@@ -121,9 +104,17 @@ namespace Bank_Account
                 }
 
             } while (account != "1" || account != "2");
-
+            var testAcocunt = new SavingsAccount();
 
         }
+
+
+        //Console.WriteLine("What would you like to do?");
+        // Console.WriteLine("1. Deposit");
+        // Console.WriteLine("2. Withdraw");
+        //       if (account == "1")
+        //        input = Console.ReadLine().Trim();
+
 
         //public void Validate()
         //{

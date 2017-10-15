@@ -20,9 +20,25 @@ namespace Bank_Account
         }
 
         //Method
-        public override string Withdraw()
+        public static void Interact()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("");
+        }
+
+        public override void Withdraw()
+        {
+            if (input >= acctBalance)
+            {
+                acctBalance = acctBalance - input;
+            }
+            else
+            {
+                Console.WriteLine("Insufficient funds, Mr. Potter.");
+            }
+        }
+        public override void Deposit()
+        {
+            acctBalance = acctBalance + input;
         }
 
     }
